@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="chat outgoing" >
+            <div class="chatcontent">
+                <div class="chatdetails">
+                    <img src="Images/you.jpg">
+                    <p>Lorem obcaecati? Similique esse et, aspernatur possllam?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat incomming" >
+            <div class="chatcontent">
+                <div class="chatdetails">
+                    <img src="Images/KAI.png">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci temporibus maxime harum doloremque obcaecati? Similique esse et, aspernatur possimus qui voluptatibus repellendus ducimus magni eius nihil at iure expedita ullam?</p>
+                </div>
+            </div>
+        </div>
+
+          <div class="chat incomming" >
+            <div class="chatcontent">
+                <div class="chatdetails">
+                    <img src="Images/KAI.png">
+                    <div class="typing-animation">
+                        <div class="typingDot" style="--delay:0.2s"></div>
+                        <div class="typingDot" style="--delay:0.3s"></div>
+                        <div class="typingDot" style="--delay:0.4s"></div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="typing-container">
+        <div class="typing-content">
+            <div class="typing-text">
+                <textarea name="input" id="typinginput" placeholder="Ask your Questions" required></textarea>
+                <button id="sendbtn" class="sendbtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

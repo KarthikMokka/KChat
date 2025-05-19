@@ -1,0 +1,128 @@
+:root{
+    --text-color:black;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}
+
+.typing-animation{
+    display: inline-flex;
+}
+
+.typing-animation .typingDot{
+    height:10px;
+    width: 10px;
+    opacity: 0.8;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: var(--text-color); /*switching on colors based on text color */
+    animation: animationDots 1.5s ease-in-out infinite;
+            /* animationDots -> function_name
+            1.5s -> animation time(duration)
+            ease-in-out -> it will start and it will speedup and again it will become slow and we seen in the chatgpt
+            infinite -> it will repeat.*/
+    animation-delay: var(--delay);
+}
+
+@keyframes animationDots { 
+    0%,44%{
+        transform : translate(0px);
+    }
+
+    22%{
+        transform : translateY(-6px);
+    }
+    44%{
+        opacity: 0.3;
+    }
+}
+
+.typing-container{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+.typing-content{
+    width: 100%;
+}
+
+.typing-text{
+    position: relative;
+    width: 100%;
+}
+
+.typing-text textarea{
+    width: 90%;
+    padding: 15px;
+    border: 1px solid rgba(164, 159, 159, 0.674);
+    border-radius: 20px;
+    margin: 0 5% 0 5%;
+    /* outline: 1px solid transparent; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.sendbtn{
+    position: absolute;
+    top: 40%;
+    right: 6.5%;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    /* visibility: hidden; */
+    font-size: 20px;
+}
+
+.chat {
+    display: flex;
+    margin: 10px 0;
+}
+
+.chat.outgoing {
+    justify-content: flex-end;
+}
+
+.chat.incomming {
+    justify-content: flex-start;
+}
+
+.chat {
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.chat.outgoing {
+    justify-content: flex-end;
+}
+
+.chat.incomming {
+    justify-content: flex-start;
+}
+
+.chat .chatcontent {
+    display: flex;
+    align-items: flex-end;
+    max-width:100%;
+}
+
+
+.chat.incomming .chatdetails {
+    background-color: #f1f1f1;
+}
+
+.chatdetails img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chatdetails p {
+    margin: 2%;
+}
+
