@@ -2,10 +2,7 @@
     --text-color:black;
 }
 
-img{
-    height: 100px;
-    width: 100px;
-}
+
 
 .typing-animation{
     display: inline-flex;
@@ -24,6 +21,7 @@ img{
             ease-in-out -> it will start and it will speedup and again it will become slow and we seen in the chatgpt
             infinite -> it will repeat.*/
     animation-delay: var(--delay);
+    color: #121212;
 }
 
 @keyframes animationDots { 
@@ -58,7 +56,7 @@ img{
 .typing-text textarea{
     width: 90%;
     padding: 15px;
-    border: 1px solid rgba(164, 159, 159, 0.674);
+    border: 1px solid rgba(210, 201, 201, 0.674);
     border-radius: 20px;
     margin: 0 5% 0 5%;
     /* outline: 1px solid transparent; */
@@ -113,7 +111,15 @@ img{
 
 
 .chat.incomming .chatdetails {
-    background-color: #f1f1f1;
+    background-color: #e0dede;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.chat.outgoing .chatdetails {
+    background-color: #d3d1d1;
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .chatdetails img {
@@ -126,3 +132,52 @@ img{
     margin: 2%;
 }
 
+#theme-button {
+  position: absolute;
+  top:7%;
+  margin-left: 2%;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text-color);
+  user-select: none;
+  transition: color 0.3s;
+}
+
+/* Dark theme overrides */
+body.dark-theme {
+  background-color: #121212;
+  color: #f1f1f1;
+  --text-color: #ffffff; /* override text color */
+}
+
+body.dark-theme .chat-content {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+body.dark-theme .chat.incomming .chatdetails {
+    background-color: #f5f3f3;
+    color: black;
+    border-radius: 10px;
+    padding: 15px;
+} 
+
+body.dark-theme .chat.outgoing .chatdetails {
+    background-color: #f5f3f3;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+body.dark-theme .typing-text textarea {
+  background-color: #fdfafa;
+  color: black;
+  border: 1px solid #444;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.image{
+    display: flex;
+    margin-top: 1%;
+    justify-content: center;
+    
+}
